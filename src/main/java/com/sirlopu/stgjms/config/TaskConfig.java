@@ -1,5 +1,6 @@
 package com.sirlopu.stgjms.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
@@ -12,7 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Configuration
 public class TaskConfig {
 
-    @Bean
+    @Autowired
     TaskExecutor taskExecutor(){
         return new SimpleAsyncTaskExecutor();
     }
